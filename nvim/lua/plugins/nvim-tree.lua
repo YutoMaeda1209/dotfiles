@@ -1,3 +1,5 @@
+vim.keymap.set('n', '<C-n>', ':NvimTreeToggle<CR>', { silent = true })
+
 return {
   "nvim-tree/nvim-tree.lua",
   version = "*",
