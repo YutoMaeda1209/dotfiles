@@ -1,5 +1,0 @@
-{
-  "dependencies": {
-    "coc-clangd": ">=0.32.0"
-  }
-}

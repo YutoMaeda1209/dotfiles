@@ -1,3 +1,7 @@
+vim.g.coc_global_extensions = {
+    'coc-clangd'
+}
+
 -- https://raw.githubusercontent.com/neoclide/coc.nvim/master/doc/coc-example-config.lua
 
 -- Some servers have issues with backup files, see #649
