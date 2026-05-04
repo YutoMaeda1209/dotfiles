@@ -33,7 +33,5 @@
   "git.enableSmartCommit": true,
   "claudeCode.preferredLocation": "sidebar",
   "claudeCode.useTerminal": true,
-  "git.confirmSync": false,
-  "dev.containers.dotfilesRepository": "https://github.com/YutoMaeda1209/dotfiles",
-  "dev.containers.dotfilesInstallCommand": "install.sh"
+  "git.confirmSync": false
 }
