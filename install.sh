@@ -42,6 +42,8 @@ link_dotfiles() {
     backup_and_link "$DOTFILES_DIR/.config/zellij"       "$HOME/.config/zellij"
     backup_and_link "$DOTFILES_DIR/.config/coc"          "$HOME/.config/coc"
     backup_and_link "$DOTFILES_DIR/.config/gh"           "$HOME/.config/gh"
+    backup_and_link "$DOTFILES_DIR/.claude/settings.json" "$HOME/.claude/settings.json"
+    backup_and_link "$DOTFILES_DIR/.claude/CLAUDE.md"    "$HOME/.claude/CLAUDE.md"
 }
 
 # --- optional package install ---
