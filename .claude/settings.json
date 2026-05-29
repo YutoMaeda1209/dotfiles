@@ -27,5 +27,9 @@
       "Bash(printenv:*)",
       "Bash(env:*)"
     ]
+  },
+  "attribution": {
+    "commit": "",
+    "pr": ""
   }
 }
