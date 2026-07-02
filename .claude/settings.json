@@ -1,11 +1,9 @@
 {
-  "theme": "dark",
-  "autoUpdates": true,
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
   "permissions": {
-    "deny": [
-      "Read(**/.env)",
-      "Read(**/.env.*)"
-    ],
     "allow": [
       "Bash(git log:*)",
       "Bash(git status:*)",
@@ -26,10 +24,13 @@
       "Bash(uname:*)",
       "Bash(printenv:*)",
       "Bash(env:*)"
+    ],
+    "deny": [
+      "Read(**/.env)",
+      "Read(**/.env.*)"
     ]
   },
-  "attribution": {
-    "commit": "",
-    "pr": ""
-  }
+  "theme": "dark",
+  "autoUpdates": true,
+  "tui": "fullscreen"
 }
