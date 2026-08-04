@@ -30,7 +30,7 @@
       "Read(**/.env.*)"
     ]
   },
+  "tui": "fullscreen",
   "theme": "dark",
-  "autoUpdates": true,
-  "tui": "fullscreen"
+  "autoUpdates": true
 }
