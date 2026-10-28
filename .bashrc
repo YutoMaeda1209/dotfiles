@@ -58,3 +58,12 @@ export NVM_DIR="$HOME/.nvm"
 
 # DevContainer CLI
 export PATH="$HOME/.devcontainers/bin:$PATH"
+
+# Homebrew
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
+
+# HxS IaC AnsibleVault Password
+export ANSIBLE_VAULT_PASSWORD_FILE=~/.ansible_vault_pass
+
+# Default editor vim
+export EDITOR=vim

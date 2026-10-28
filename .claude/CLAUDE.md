@@ -21,3 +21,5 @@
 ## ツール
 
 - ブラウザでデバッグする場合は、`Chrome`ではなく`agent-browser`を使用する。
+- `.devcontainer/`があればビルドツールなどはコンテナにインストールされているので、下記のコマンドで実行する。
+  - `devcontainer exec --workspace-folder . <コマンド>`
