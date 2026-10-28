@@ -66,4 +66,4 @@ eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv bash)"
 export ANSIBLE_VAULT_PASSWORD_FILE=~/.ansible_vault_pass
 
 # Default editor vim
-export EDITOR=vim
+export EDITOR=nvim
