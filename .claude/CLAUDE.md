@@ -19,5 +19,8 @@
 ## ツール
 
 - ブラウザでデバッグする場合は、`Chrome`ではなく`agent-browser`を使用する。
+  - `AGENT_BROWSER_PROFILE`でprofileを固定しているので、Googleなどのログイン状態は永続化されている。`--profile`や`--session`は指定しない。
+  - ログインが必要な画面に遭遇したら、認証情報を扱わず、ユーザーに`agent-browser --headed true open https://accounts.google.com/`で手動ログインしてもらう。
+  - profileディレクトリ（`~/.agent-browser/profiles/claude`）は削除しない。
 - `.devcontainer/`があればビルドツールなどはコンテナにインストールされているので、下記のコマンドで実行する。
   - `devcontainer exec --workspace-folder . <コマンド>`
