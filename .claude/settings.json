@@ -1,7 +1,8 @@
 {
   "attribution": {
     "commit": "",
-    "pr": "このPRは、Claude Codeを活用し、私が責任を持って作成しています。"
+    "pr": "このPRは、Claude Codeを活用し、私が責任を持って作成しています。",
+    "sessionUrl": false
   },
   "permissions": {
     "allow": [
