@@ -31,8 +31,8 @@
     ]
   },
   "env": {
-    "AGENT_BROWSER_SESSION": "claude",
-    "AGENT_BROWSER_PROFILE": "~/.agent-browser/profiles/claude",
+    "AGENT_BROWSER_SESSION": "university",
+    "AGENT_BROWSER_PROFILE": "~/.agent-browser/profiles/university",
     "AGENT_BROWSER_IDLE_TIMEOUT_MS": "3600000"
   },
   "tui": "fullscreen",

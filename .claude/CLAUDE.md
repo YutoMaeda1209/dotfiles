@@ -23,8 +23,15 @@
 ## ツール
 
 - ブラウザでデバッグする場合は、Chrome ではなく`agent-browser`を使用する
-  - `AGENT_BROWSER_PROFILE`で profile を固定しているので、Google などのログイン状態は永続化されている。`--profile`や`--session`は指定しない
-  - ログインが必要な画面に遭遇したら、認証情報を扱わず、ユーザーに`agent-browser --headed true open https://accounts.google.com/`で手動ログインしてもらう。
-  - profile ディレクトリ (`~/.agent-browser/profiles/claude`) は削除しない。
+  - profile は 2 つあり、ログイン状態は永続化されている。用途に応じて使い分ける
+    - 大学アカウント: デフォルト (`AGENT_BROWSER_SESSION`/`AGENT_BROWSER_PROFILE`で`university`に固定)。`--profile`や`--session`は指定しない
+    - 個人アカウント: `agent-browser --session personal --profile ~/.agent-browser/profiles/personal <コマンド>`のように毎回両方を指定する
+    - どちらを使うべきか判断できない場合はユーザーに確認する
+  - ログインが必要な画面に遭遇したら、認証情報を扱わず、ユーザーに手動ログインしてもらう
+    - Google は`agent-browser`経由のログインをブロックするので、先に該当セッションを`agent-browser close`してから、同梱の Chrome を自動操作フラグなしで直接起動する
+    - `~/.agent-browser/browsers/chrome-*/chrome --user-data-dir=$HOME/.agent-browser/profiles/<university|personal> --no-first-run --ozone-platform=x11 --disable-gpu --password-store=basic --use-mock-keychain https://accounts.google.com/`
+      - `agent-browser`は`--password-store=basic`で起動するので、これを付けないと Cookie の暗号化方式が合わず、ログイン状態が引き継がれない
+    - ログイン後はウィンドウを閉じてもらう。Chrome 本体の同期にはログインしないよう伝える
+  - profile ディレクトリ (`~/.agent-browser/profiles/university`、`~/.agent-browser/profiles/personal`) は削除しない。
 - `.devcontainer/`があればビルドツールなどはコンテナにインストールされているので、下記のコマンドで実行する。
   - `devcontainer exec --workspace-folder . <コマンド>`
