@@ -32,6 +32,7 @@ shopt -s checkwinsize
 # Aliases
 alias ll='ls -al'
 alias vim='nvim'
+alias open='xdg-open'
 
 # Load additional alias definitions
 if [ -f ~/.bash_aliases ]; then
